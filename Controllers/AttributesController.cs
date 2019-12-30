@@ -1,6 +1,10 @@
-﻿namespace TuringEcommerce.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace TuringEcommerce.Controllers
 {
-    public class AttributesController
+    [ApiController]
+    [Route("[controller]")]
+    public class AttributesController : ControllerBase
     {
     }
 }
