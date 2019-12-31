@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TuringEcommerce.Models;
@@ -15,24 +17,44 @@ namespace TuringEcommerce.Services
             Context = context;
         }
 
-        public async Task<IEnumerable<Department>> GetAllAttributes()
+        public async Task<IEnumerable<Attribute>> GetAllAttributes()
         {
-            return await Context.Department.AsNoTracking().ToListAsync();
+            return await Context.Attribute.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Department> GetAttributeById(int id)
+        public async Task<Attribute> GetAttributeById(int id)
         {
-            return await Context.Department.FirstOrDefaultAsync(x => x.DepartmentId == id);
+            return await Context.Attribute.FirstOrDefaultAsync(x => x.AttributeId == id);
         }
 
-        public async Task<Department> GetAllAtributesValuesByAttributeId(int id)
+        public async Task<IEnumerable> GetAllAtributesValuesByAttributeId(int id)
         {
-            throw new System.NotImplementedException();
+            var attribute = await Context
+                .AttributeValue
+                .Where(d => d.AttributeId == id)
+                .Select(a => new 
+                {
+                    AttributeValueId = a.AttributeValueId,
+                    Value = a.Value
+                })
+                .ToListAsync();
+            return attribute;
         }
 
-        public async Task<Department> GetAllAttributesOfAProductByProductId(int id)
+        public async Task<IEnumerable> GetAllAttributesOfAProductByProductId(int id)
         {
-            throw new System.NotImplementedException();
+            var productAttributeValues = from productAttribute in Context.ProductAttribute
+                join attributeValue in Context.AttributeValue on productAttribute.AttributeValueId equals attributeValue.AttributeValueId
+                join attribute in Context.Attribute on attributeValue.AttributeId equals attribute.AttributeId
+                where productAttribute.ProductId == id
+                select new 
+                {
+                    AttributeValueId = attributeValue.AttributeValueId,
+                    AttributeValue = attributeValue.Value,
+                    AttributeName = attribute.Name
+                };
+
+            return await productAttributeValues.ToListAsync();
         }
     }
 }

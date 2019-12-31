@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TuringEcommerce.Models;
+using TuringEcommerce.Services;
+using TuringEcommerce.Services.Interfaces;
 
 namespace TuringEcommerce
 {
@@ -21,9 +23,11 @@ namespace TuringEcommerce
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TuringContext>(options =>
-                options.UseMySql(Configuration["ConnectionStrings:DefaultConection"],
+                options.UseMySql(Configuration["ConnectionStrings:DefaultConnection"],
                     x => x.ServerVersion("8.0.16-mysql")));
             services.AddControllers();
+            services.AddScoped<IDepartmentServices, DepartamentServices>();
+            services.AddScoped<ICategoriesServices, CategorysServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

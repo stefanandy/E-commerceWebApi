@@ -35,3 +35,9 @@ C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\obj\Debug\netcoreapp3.1\Bu
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\obj\Debug\netcoreapp3.1\Business.dll
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\obj\Debug\netcoreapp3.1\Business.pdb
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\AspNetCore.PaginatedList.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.EntityFramework.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.Mvc.dll

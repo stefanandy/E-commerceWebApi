@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TuringEcommerce.Models
 {
-    public class TuringContext : DbContext
+    public partial class TuringContext : DbContext
     {
         public TuringContext()
         {
@@ -610,9 +610,7 @@ namespace TuringEcommerce.Models
             OnModelCreatingPartial(modelBuilder);
         }
 
-        private void OnModelCreatingPartial(ModelBuilder modelBuilder)
-        {
-            throw new NotImplementedException();
-        }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
     }
 }
