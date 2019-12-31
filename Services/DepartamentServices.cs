@@ -6,23 +6,23 @@ using TuringEcommerce.Services.Interfaces;
 
 namespace TuringEcommerce.Services
 {
-    public class DepartamentServices:IDepartmentsCategories
+    public class DepartamentServices:IDepartmentServices
     {
-        private readonly TuringContext Context;
+        private readonly TuringContext _context;
 
         public DepartamentServices(TuringContext context)
         {
-            Context = context;
+            _context = context;
         }
 
         public async Task<IEnumerable<Department>> GetAllDepartaments()
         {
-            return await Context.Department.AsNoTracking().ToListAsync();
+            return await _context.Department.AsNoTracking().ToListAsync();
         }
 
         public async Task<Department> GetDepartamentById(int id)
         {
-            return await Context.Department.FirstOrDefaultAsync(x=>x.DepartmentId==id);
+            return await _context.Department.FirstOrDefaultAsync(x=>x.DepartmentId==id);
         }
     }
 }
