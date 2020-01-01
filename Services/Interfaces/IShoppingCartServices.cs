@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TuringEcommerce.Models;
 
@@ -6,7 +7,7 @@ namespace TuringEcommerce.Services.Interfaces
 {
     public interface IShoppingCartServices
     {
-        public Task<ShoppingCart> GetShoppingCartById(int id);
+        public Task<IEnumerable<CartProduct>> GetShoppingCartById(string id);
         public Task AddItem(string cartId, int productId, string attributes);
         public Task UpdateItems(int itemId, int quantity);
         public Task<string> GetCartIdByItem(int itemId);

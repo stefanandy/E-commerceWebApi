@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace TuringEcommerce.Models
@@ -612,5 +613,9 @@ namespace TuringEcommerce.Models
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
+        public IEnumerator<object> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
