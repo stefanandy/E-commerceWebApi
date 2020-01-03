@@ -1,6 +1,12 @@
-﻿namespace TuringEcommerce.Controllers
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace TuringEcommerce.Controllers
 {
-    public class CustomersControllers
+    [ApiController]
+    [Route("customers")]
+    public class CustomersControllers:ControllerBase
     {
+            
     }
 }
