@@ -28,6 +28,16 @@ namespace TuringEcommerce
             services.AddControllers();
             services.AddScoped<IDepartmentServices, DepartamentServices>();
             services.AddScoped<ICategoriesServices, CategorysServices>();
+            services.AddScoped<IAttributesServices, AttributesServices>();
+            services.AddScoped<ICustomerServices, CustomerServices>();
+            services.AddScoped<IOrdersServices, OrderServices>();
+            services.AddScoped<IProductsServices, ProductServices>();
+            services.AddScoped<IShippingServices, ShippingService>();
+            services.AddScoped<IShoppingCartServices, ShoppingCartServices>();
+            services.AddScoped<ITaxServices, TaxService>();
+            
+            services.AddScoped<IPasswordHasher,PasswordHasher>();
+            services.AddScoped<IStripeServices, StripeServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

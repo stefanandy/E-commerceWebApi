@@ -41,3 +41,7 @@ C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\En
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.dll
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.EntityFramework.dll
 C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\PagedList.Mvc.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\Stripe.net.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lejer\RiderProjects\TuringEcommerce\Business\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
