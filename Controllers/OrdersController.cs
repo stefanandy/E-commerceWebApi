@@ -53,6 +53,20 @@ namespace TuringEcommerce.Controllers
 
             return Ok(orders);
         }
+        
+        [HttpGet("/shortDetail/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetShortOrderDetails(int id)
+        {
+            var orders = await _services.GetOrderDetailById(id);
+            if (orders==null)
+            {
+                return NotFound();
+            }
+
+            return Ok(orders);
+        }
 
     }
 }
