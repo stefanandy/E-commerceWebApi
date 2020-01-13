@@ -11,7 +11,7 @@ namespace TuringEcommerce.Services
         {
             // Set your secret key: remember to change this to your live secret key in production
             // See your keys here: https://dashboard.stripe.com/account/apikeys
-            StripeConfiguration.ApiKey = "sk_test_4eC39HqLyjWDarjtT1zdp7dc";
+            StripeConfiguration.ApiKey = "sk_test_lomdOfxbm7QDgZWvR82UhV6D";
 
             // Token is created using Checkout or Elements!
             // Get the payment token submitted by the form:
@@ -25,6 +25,7 @@ namespace TuringEcommerce.Services
             };
             var service = new ChargeService();
             Charge charge = service.Create(options);
+            
         }
     }
 }
